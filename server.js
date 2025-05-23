@@ -14,6 +14,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Welcome route
+app.get('/', (req, res) => {
+  res.send('Welcome to Educase Assignment API');
+});
+
 // Routes
 app.use('/api', schoolRoutes);
 
